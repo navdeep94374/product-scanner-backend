@@ -19,10 +19,10 @@ def analyse(request:Request,payload:ProductAnalysisReq = Body(...),user = Depend
     return analyse_product(request.app.database,user,payload)
 
 @product_analysis_router.post("/carcinogens",status_code=201)
-def detect_carcinogens(request:Request,file: UploadFile = File(...)):
+def detect_carcinogens(request:Request,image: UploadFile = File(...)):
      # unauthenticated user
     user = {"email":"Aa"}
     if not isinstance(user, dict):
         return user
     
-    return analyse_carcinogens(request.app.database,user,file)
+    return analyse_carcinogens(request.app.database,user,image)

@@ -9,7 +9,6 @@ from utils.HashPassword import HashPassword
 
 def update_user(payload,db,user):
     try:
-        print(payload)
         user = db["users"].find_one({"email":user["email"]})
 
         if not user:
@@ -28,6 +27,5 @@ def update_user(payload,db,user):
         return JSONResponse(status_code=status.HTTP_200_OK,content=ApiResponse("User updated successfully",status_code=status.HTTP_200_OK,success=True,data=updated_user).get_info())
     
     except Exception as e:
-        print(e)
         return JSONResponse(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,content=ApiError("Something went wrong", status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, success=False,err=str(e)).get_info())
  

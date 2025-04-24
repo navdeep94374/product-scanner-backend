@@ -18,200 +18,200 @@ def filter_allergen_tags(allergens):
   filter_data = [allergen.replace("en:","") for allergen in allergens]
   return filter_data
 
-data= {
-    "code": "3017620422003",
-    "name": "Nutella",
-    "ingredients": [
-      {
-        "ciqual_proxy_food_code": "31016",
-        "ecobalyse_code": "8f075c25-9ebf-430c-b41d-51d165c6e0d8",
-        "id": "en:sugar",
-        "is_in_taxonomy": 1,
-        "percent_estimate": 38.35,
-        "percent_max": 60,
-        "percent_min": 16.7,
-        "text": "Sucre",
-        "vegan": "yes",
-        "vegetarian": "yes"
-      },
-      {
-        "ciqual_food_code": "16129",
-        "ecobalyse_code": "45658c32-66d9-4305-a34b-21d6a4cef89c",
-        "from_palm_oil": "yes",
-        "id": "en:palm-oil",
-        "is_in_taxonomy": 1,
-        "percent_estimate": 24.75,
-        "percent_max": 36.5,
-        "percent_min": 13,
-        "text": "huile de palme",
-        "vegan": "yes",
-        "vegetarian": "yes"
-      },
-      {
-        "ciqual_food_code": "15004",
-        "ecobalyse_code": "hazelnut-unshelled-non-eu",
-        "id": "en:hazelnut",
-        "is_in_taxonomy": 1,
-        "percent": 13,
-        "percent_estimate": 13,
-        "percent_max": 13,
-        "percent_min": 13,
-        "text": "NOISETTES",
-        "vegan": "yes",
-        "vegetarian": "yes"
-      },
-      {
-        "ciqual_proxy_food_code": "18100",
-        "id": "en:fat-reduced-cocoa",
-        "is_in_taxonomy": 1,
-        "percent": 7.4,
-        "percent_estimate": 7.4,
-        "percent_max": 7.4,
-        "percent_min": 7.4,
-        "text": "cacao maigre",
-        "vegan": "yes",
-        "vegetarian": "yes"
-      },
-      {
-        "ciqual_food_code": "19054",
-        "ecobalyse_code": "b6776a28-ec84-4bf3-988c-07b3c29f6136",
-        "id": "en:skimmed-milk-powder",
-        "is_in_taxonomy": 1,
-        "percent": 6.6,
-        "percent_estimate": 6.6,
-        "percent_max": 6.6,
-        "percent_min": 6.6,
-        "text": "LAIT écrémé en poudre",
-        "vegan": "no",
-        "vegetarian": "yes"
-      },
-      {
-        "id": "en:whey-powder",
-        "is_in_taxonomy": 1,
-        "percent_estimate": 3.3,
-        "percent_max": 6.6,
-        "percent_min": 0,
-        "text": "LACTOSERUM en poudre",
-        "vegan": "no",
-        "vegetarian": "maybe"
-      },
-      {
-        "id": "en:emulsifier",
-        "ingredients": [
-          {
-            "id": "en:e322",
-            "ingredients": [
-              {
-                "ciqual_food_code": "42200",
-                "id": "en:soya-lecithin",
-                "is_in_taxonomy": 1,
-                "percent_estimate": 3.3,
-                "percent_max": 6.6,
-                "percent_min": 0,
-                "text": "lécithines de SOJA",
-                "vegan": "yes",
-                "vegetarian": "yes"
-              }
-            ],
-            "is_in_taxonomy": 1,
-            "percent_estimate": 3.3,
-            "percent_max": 6.6,
-            "percent_min": 0,
-            "text": "lécithines",
-            "vegan": "maybe",
-            "vegetarian": "maybe"
-          }
-        ],
-        "is_in_taxonomy": 1,
-        "percent_estimate": 3.3,
-        "percent_max": 6.6,
-        "percent_min": 0,
-        "text": "émulsifiants"
-      },
-      {
-        "id": "en:vanillin",
-        "is_in_taxonomy": 1,
-        "percent_estimate": 3.30000000000001,
-        "percent_max": 6.6,
-        "percent_min": 0,
-        "text": "vanilline"
-      }
-    ],
-    "nutriscore_data": {
-      "components": {
-        "negative": [
-          {
-            "id": "energy",
-            "points": 6,
-            "points_max": 10,
-            "unit": "kJ",
-            "value": 2252
-          },
-          {
-            "id": "sugars",
-            "points": 15,
-            "points_max": 15,
-            "unit": "g",
-            "value": 56.3
-          },
-          {
-            "id": "saturated_fat",
-            "points": 10,
-            "points_max": 10,
-            "unit": "g",
-            "value": 10.6
-          },
-          {
-            "id": "salt",
-            "points": 0,
-            "points_max": 20,
-            "unit": "g",
-            "value": 0.11
-          }
-        ],
-        "positive": [
-          {
-            "id": "fiber",
-            "points": 0,
-            "points_max": 5,
-            "unit": "g",
-            "value": None
-          },
-          {
-            "id": "fruits_vegetables_legumes",
-            "points": 0,
-            "points_max": 5,
-            "unit": "%",
-            "value": 0
-          }
-        ]
-      },
-      "count_proteins": 0,
-      "count_proteins_reason": "negative_points_greater_than_or_equal_to_11",
-      "grade": "e",
-      "is_beverage": 0,
-      "is_cheese": 0,
-      "is_fat_oil_nuts_seeds": 0,
-      "is_red_meat_product": 0,
-      "is_water": 0,
-      "negative_points": 31,
-      "negative_points_max": 55,
-      "positive_nutrients": [
-        "fiber",
-        "fruits_vegetables_legumes"
-      ],
-      "positive_points": 0,
-      "positive_points_max": 10,
-      "score": 31
-    },
-    "thumbnail": "https://images.openfoodfacts.org/images/products/301/762/042/2003/front_en.633.400.jpg",
-    "allergens_tags": [
-      "en:milk",
-      "en:nuts",
-      "en:soybeans"
-    ],
-    "user_sensitive_to_allergens":["milk"]
-  }
+# data= {
+#     "code": "3017620422003",
+#     "name": "Nutella",
+#     "ingredients": [
+#       {
+#         "ciqual_proxy_food_code": "31016",
+#         "ecobalyse_code": "8f075c25-9ebf-430c-b41d-51d165c6e0d8",
+#         "id": "en:sugar",
+#         "is_in_taxonomy": 1,
+#         "percent_estimate": 38.35,
+#         "percent_max": 60,
+#         "percent_min": 16.7,
+#         "text": "Sucre",
+#         "vegan": "yes",
+#         "vegetarian": "yes"
+#       },
+#       {
+#         "ciqual_food_code": "16129",
+#         "ecobalyse_code": "45658c32-66d9-4305-a34b-21d6a4cef89c",
+#         "from_palm_oil": "yes",
+#         "id": "en:palm-oil",
+#         "is_in_taxonomy": 1,
+#         "percent_estimate": 24.75,
+#         "percent_max": 36.5,
+#         "percent_min": 13,
+#         "text": "huile de palme",
+#         "vegan": "yes",
+#         "vegetarian": "yes"
+#       },
+#       {
+#         "ciqual_food_code": "15004",
+#         "ecobalyse_code": "hazelnut-unshelled-non-eu",
+#         "id": "en:hazelnut",
+#         "is_in_taxonomy": 1,
+#         "percent": 13,
+#         "percent_estimate": 13,
+#         "percent_max": 13,
+#         "percent_min": 13,
+#         "text": "NOISETTES",
+#         "vegan": "yes",
+#         "vegetarian": "yes"
+#       },
+#       {
+#         "ciqual_proxy_food_code": "18100",
+#         "id": "en:fat-reduced-cocoa",
+#         "is_in_taxonomy": 1,
+#         "percent": 7.4,
+#         "percent_estimate": 7.4,
+#         "percent_max": 7.4,
+#         "percent_min": 7.4,
+#         "text": "cacao maigre",
+#         "vegan": "yes",
+#         "vegetarian": "yes"
+#       },
+#       {
+#         "ciqual_food_code": "19054",
+#         "ecobalyse_code": "b6776a28-ec84-4bf3-988c-07b3c29f6136",
+#         "id": "en:skimmed-milk-powder",
+#         "is_in_taxonomy": 1,
+#         "percent": 6.6,
+#         "percent_estimate": 6.6,
+#         "percent_max": 6.6,
+#         "percent_min": 6.6,
+#         "text": "LAIT écrémé en poudre",
+#         "vegan": "no",
+#         "vegetarian": "yes"
+#       },
+#       {
+#         "id": "en:whey-powder",
+#         "is_in_taxonomy": 1,
+#         "percent_estimate": 3.3,
+#         "percent_max": 6.6,
+#         "percent_min": 0,
+#         "text": "LACTOSERUM en poudre",
+#         "vegan": "no",
+#         "vegetarian": "maybe"
+#       },
+#       {
+#         "id": "en:emulsifier",
+#         "ingredients": [
+#           {
+#             "id": "en:e322",
+#             "ingredients": [
+#               {
+#                 "ciqual_food_code": "42200",
+#                 "id": "en:soya-lecithin",
+#                 "is_in_taxonomy": 1,
+#                 "percent_estimate": 3.3,
+#                 "percent_max": 6.6,
+#                 "percent_min": 0,
+#                 "text": "lécithines de SOJA",
+#                 "vegan": "yes",
+#                 "vegetarian": "yes"
+#               }
+#             ],
+#             "is_in_taxonomy": 1,
+#             "percent_estimate": 3.3,
+#             "percent_max": 6.6,
+#             "percent_min": 0,
+#             "text": "lécithines",
+#             "vegan": "maybe",
+#             "vegetarian": "maybe"
+#           }
+#         ],
+#         "is_in_taxonomy": 1,
+#         "percent_estimate": 3.3,
+#         "percent_max": 6.6,
+#         "percent_min": 0,
+#         "text": "émulsifiants"
+#       },
+#       {
+#         "id": "en:vanillin",
+#         "is_in_taxonomy": 1,
+#         "percent_estimate": 3.30000000000001,
+#         "percent_max": 6.6,
+#         "percent_min": 0,
+#         "text": "vanilline"
+#       }
+#     ],
+#     "nutriscore_data": {
+#       "components": {
+#         "negative": [
+#           {
+#             "id": "energy",
+#             "points": 6,
+#             "points_max": 10,
+#             "unit": "kJ",
+#             "value": 2252
+#           },
+#           {
+#             "id": "sugars",
+#             "points": 15,
+#             "points_max": 15,
+#             "unit": "g",
+#             "value": 56.3
+#           },
+#           {
+#             "id": "saturated_fat",
+#             "points": 10,
+#             "points_max": 10,
+#             "unit": "g",
+#             "value": 10.6
+#           },
+#           {
+#             "id": "salt",
+#             "points": 0,
+#             "points_max": 20,
+#             "unit": "g",
+#             "value": 0.11
+#           }
+#         ],
+#         "positive": [
+#           {
+#             "id": "fiber",
+#             "points": 0,
+#             "points_max": 5,
+#             "unit": "g",
+#             "value": None
+#           },
+#           {
+#             "id": "fruits_vegetables_legumes",
+#             "points": 0,
+#             "points_max": 5,
+#             "unit": "%",
+#             "value": 0
+#           }
+#         ]
+#       },
+#       "count_proteins": 0,
+#       "count_proteins_reason": "negative_points_greater_than_or_equal_to_11",
+#       "grade": "e",
+#       "is_beverage": 0,
+#       "is_cheese": 0,
+#       "is_fat_oil_nuts_seeds": 0,
+#       "is_red_meat_product": 0,
+#       "is_water": 0,
+#       "negative_points": 31,
+#       "negative_points_max": 55,
+#       "positive_nutrients": [
+#         "fiber",
+#         "fruits_vegetables_legumes"
+#       ],
+#       "positive_points": 0,
+#       "positive_points_max": 10,
+#       "score": 31
+#     },
+#     "thumbnail": "https://images.openfoodfacts.org/images/products/301/762/042/2003/front_en.633.400.jpg",
+#     "allergens_tags": [
+#       "en:milk",
+#       "en:nuts",
+#       "en:soybeans"
+#     ],
+#     "user_sensitive_to_allergens":["milk"]
+#   }
 
 def analyse_product(db,user,payload):
     try:

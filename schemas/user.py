@@ -19,7 +19,7 @@ class User(BaseModel):
     age:Optional[int] = None
     gender:Optional[Gender] = Gender["not_disclosed"].value
     allergen_info:Optional[List[str]] = []
-    ingredient_pref:Optional[List[str]] = None
+    ingredient_pref:Optional[List[str]] = []
 
 class ShowUser(BaseModel):
     email:str
