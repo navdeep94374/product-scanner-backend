@@ -2,6 +2,7 @@ from pydantic import BaseModel,Field
 import uuid
 from typing import Optional,List
 from enum import Enum
+from datetime import datetime
 
 class Gender(str, Enum):
     male = "Male"
@@ -10,7 +11,6 @@ class Gender(str, Enum):
     not_disclosed = "Not Disclosed"
 
 class User(BaseModel):
-    id:Optional[str] = Field(default_factory=uuid.uuid4,alias="_id")
     name:str
     email:str
     password:str
@@ -20,6 +20,8 @@ class User(BaseModel):
     gender:Optional[Gender] = Gender["not_disclosed"].value
     allergen_info:Optional[List[str]] = []
     ingredient_pref:Optional[List[str]] = []
+    created_at: datetime = Field(default_factory=datetime.utcnow().isoformat)
+    updated_at: datetime = Field(default_factory=datetime.utcnow().isoformat)
 
 class ShowUser(BaseModel):
     email:str
@@ -33,3 +35,4 @@ class UpdateUser(BaseModel):
     gender: Optional[Gender] = None
     allergen_info: Optional[List[str]] = None
     ingredient_pref:Optional[List[str]] = None
+    updated_at: datetime = Field(default_factory=datetime.utcnow().isoformat)

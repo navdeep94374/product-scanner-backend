@@ -233,8 +233,6 @@ def analyse_product(db,user,payload):
          "carcinogens" : clean_text(check_carcinogen(product.get("ingredients_text", "")))
         }
 
-        print(analysis["ingredients"])
-       
         return JSONResponse(status_code=200,content=ApiResponse("Product analysis sucess",200,True,analysis).get_info())
 
 

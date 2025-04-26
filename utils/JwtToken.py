@@ -27,6 +27,7 @@ def verify_access_token(token:str = Depends(oauth_scheme)):
 
         if not token:
             err = ApiError("failed to verify user",401,False).get_info()
+            print(err)
             return JSONResponse(status_code=401,content=err)
 
         payload = jwt.decode(token,JWT_SECRET_KEY,ALGORITHM)
@@ -54,6 +55,7 @@ def get_current_user(request:Request,token:str = Depends(oauth_scheme)):
     except Exception as e:
         print(e)
         err = ApiError("failed to verify user",401,False,str(e)).get_info()
+        print(err)
         return JSONResponse(status_code=401,content=err)
 
 

@@ -9,9 +9,8 @@ def check_carcinogen(text):
     vectorizer = joblib.load(vectors_file)
     words = text.split()
     carcinogenic_ingredients = [word for word in words if model.predict(vectorizer.transform([word]))[0] == 1]
-        
     if carcinogenic_ingredients:
-        result_text = "Potential carcinogens detected:\n" + "\n".join(carcinogenic_ingredients)
+        result_text = "Potential carcinogens detected:\n" + ", ".join(carcinogenic_ingredients)
     else:
         result_text = "No known carcinogens detected."
     

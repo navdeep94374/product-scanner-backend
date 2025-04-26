@@ -1,6 +1,7 @@
 from fastapi import FastAPI,Depends, Request
 from routes.user import user_router
 from routes.analysis import product_analysis_router
+from routes.groceries import groceries_router
 from dotenv import dotenv_values
 from pymongo import MongoClient
 from fastapi.middleware.cors import CORSMiddleware
@@ -30,3 +31,4 @@ def shutdown_db_client():
 
 app.include_router(user_router)
 app.include_router(product_analysis_router)
+app.include_router(groceries_router)

@@ -3,7 +3,7 @@ from utils.ApiError import ApiError
 from utils.ApiResponse import ApiResponse
 from fastapi.responses import JSONResponse
 from utils.HashPassword import HashPassword
-
+from fastapi.encoders import jsonable_encoder
 
 def create_user(user, db):
     try:
@@ -17,8 +17,6 @@ def create_user(user, db):
         hashed_password = HashPassword.hashPwd(user.password)
         user_data = dict(user).copy()
         user_data["password"] = hashed_password
-        user_data.pop("id")
-
         new_user = db["users"].insert_one(user_data)
 
         created_user = db["users"].find_one({"_id":new_user.inserted_id},{"password":0})
