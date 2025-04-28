@@ -8,10 +8,13 @@ def check_carcinogen(text):
     model = joblib.load(model_file)
     vectorizer = joblib.load(vectors_file)
     words = text.split()
-    carcinogenic_ingredients = [word for word in words if model.predict(vectorizer.transform([word]))[0] == 1]
-    if carcinogenic_ingredients:
-        result_text = "Potential carcinogens detected:\n" + ", ".join(carcinogenic_ingredients)
-    else:
-        result_text = "No known carcinogens detected."
-    
-    return result_text
+    predictions = {}
+ 
+    for word in words:
+        transformed_word = vectorizer.transform([word])
+        predicted_group = model.predict(transformed_word)[0]
+        predictions[word] = predicted_group
+    print(predictions)
+    return predictions
+
+#check_carcinogen("Tobacco smoke, Asbestos, Aflatoxins, Benzene, Formaldehyde, Arsenic, Ultraviolet radiation (sunlight), Alcohol, Processed meats, Diesel engine exhaust, Human papillomavirus (HPV), Radon, Cadmium, Vinyl chloride, Polychlorinated biphenyls (PCBs), Benzidine, Chromium(VI) compounds, Soot, Coal tar, Aristolochic acid, Silica dust, Mustard gas, Dioxins, Wood dust, Helicobacter pylori (H. pylori), Occupational exposures in rubber production, and many others.")

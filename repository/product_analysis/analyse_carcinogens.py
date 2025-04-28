@@ -23,7 +23,7 @@ def analyse_carcinogens(db,user,image):
         text = " ".join([clean_text(res[1]) for res in results])
         res = check_carcinogen(text)
 
-        return JSONResponse(status_code=200,content=ApiResponse("Carciongens analysis sucess",200,True,{"carcinogens":clean_text(res)}).get_info())
+        return JSONResponse(status_code=200,content=ApiResponse("Carciongens analysis sucess",200,True,{"carcinogens":res}).get_info())
 
 
     except Exception as e:
